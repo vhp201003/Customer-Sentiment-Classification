@@ -20,7 +20,8 @@ Cleaning/
 ├── spelling_correction.py                   # Sửa lỗi chính tả bằng mô hình pre-trained
 ├── merge_processed_chunks.py                # Gộp dữ liệu sau khi xử lý
 ├── remove_punctuation_and_replace_numbers.py # Xóa dấu câu và thay thế số bằng chữ
-└── Data/
+
+Data/
     └── cleaning/                            # Thư mục chứa dữ liệu đã làm sạch
 ```
 
