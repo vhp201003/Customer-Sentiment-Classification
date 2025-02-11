@@ -22,7 +22,7 @@ Cleaning/
 ├── remove_punctuation_and_replace_numbers.py # Xóa dấu câu và thay thế số bằng chữ
 
 Data/
-    └── cleaning/                            # Thư mục chứa dữ liệu đã làm sạch
+└── cleaning/                            # Thư mục chứa dữ liệu đã làm sạch
 ```
 
 ## Cách cài đặt
