@@ -60,7 +60,3 @@ Script sẽ sử dụng `comment_scraper.py` để lấy dữ liệu bình luậ
 ## Lưu ý
 - API có thể thay đổi theo thời gian, nếu có lỗi cần kiểm tra lại URL API trong `config.py`.
 - Một số request có thể bị chặn nếu gửi quá nhiều trong thời gian ngắn. Có thể chỉnh thời gian delay trong `product_scraper.py`.
-
-## Đóng góp
-Mọi đóng góp để cải thiện module vui lòng tạo pull request hoặc issue trên repository GitHub (nếu có).
-
