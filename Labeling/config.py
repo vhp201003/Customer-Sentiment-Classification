@@ -19,7 +19,5 @@ LABELS = ["tích cực", "tiêu cực"]
 PATTERN_OUTPUT_FILE_NAME = "chunk_*.csv"
 CHUNK_SIZE = 100 #Số lượng file được chia
 # Mô hình sửa lỗi
-MODEL_NAME = "joeddav/xlm-roberta-large-xnli"
-MODEL_TYPE = "zero-shot-classification"
-MAX_LENGTH = 512
-BATCH_SIZE = 96
+MODEL_NAME = "5CD-AI/Vietnamese-Sentiment-visobert"
+MODEL_TYPE = "sentiment-analysis"
