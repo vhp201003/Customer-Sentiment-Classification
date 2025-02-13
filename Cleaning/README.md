@@ -13,13 +13,14 @@ Dữ liệu được lưu trữ tại thư mục `/Data/cleaning` để phục v
 ## Cấu trúc module
 ```
 Cleaning/
-├── config.py                                # Cấu hình đường dẫn và tham số
-├── main.py                                  # Script chính để chạy toàn bộ quá trình cleaning
-├── remove_url_emoj.py                       # Xóa URL và emoji khỏi dữ liệu
-├── chunk_data.py                            # Chia dữ liệu thành các phần nhỏ
-├── spelling_correction.py                   # Sửa lỗi chính tả bằng mô hình pre-trained
-├── merge_processed_chunks.py                # Gộp dữ liệu sau khi xử lý
-├── remove_punctuation_and_replace_numbers.py # Xóa dấu câu và thay thế số bằng chữ
+├── config.py                                  # Cấu hình đường dẫn và tham số
+├── main.py                                    # Script chính để chạy toàn bộ quá trình cleaning
+├── remove_url_emoj.py                         # Xóa URL và emoji khỏi dữ liệu
+├── chunk_data.py                              # Chia dữ liệu thành các phần nhỏ
+├── spelling_correction.py                     # Sửa lỗi chính tả bằng mô hình pre-trained
+├── merge_processed_chunks.py                  # Gộp dữ liệu sau khi xử lý
+├── remove_punctuation_and_replace_numbers.py  # Xóa dấu câu và thay thế số bằng chữ
+├── filter_by_IQR_num_words.py                 # Lọc ra các từ quá ngắn hoặc quá dài 
 
 Data/
 └── cleaning/                            # Thư mục chứa dữ liệu đã làm sạch
@@ -47,6 +48,7 @@ Script `main.py` sẽ gọi lần lượt các module xử lý dữ liệu theo 
 - `chunk_output/`: Dữ liệu đã qua sửa lỗi chính tả
 - `output_merged_model.csv`: Dữ liệu đã gộp lại sau khi sửa lỗi chính tả
 - `output_remove_punctuation.csv`: Dữ liệu đã loại bỏ dấu câu và thay thế số bằng chữ
+- `cleaning.csv`: Dữ liệu đã lọc ra các từ quá ngắn hoặc quá dài
 
 ## Mô tả chi tiết từng module
 ### 1. `remove_url_emoj.py`
@@ -68,6 +70,9 @@ Script `main.py` sẽ gọi lần lượt các module xử lý dữ liệu theo 
 ### 5. `remove_punctuation_and_replace_numbers.py`
 - Xóa dấu câu khỏi dữ liệu.
 - Chuyển đổi số thành chữ để giữ nguyên ý nghĩa của câu.
+
+### 6. `filter_by_IQR_num_words.py`
+- Lọc ra các từ quá ngắn hoặc quá dài
 
 ## Lưu ý
 - Các file đầu vào và đầu ra được quy định trong `config.py`, bạn có thể thay đổi đường dẫn nếu cần.

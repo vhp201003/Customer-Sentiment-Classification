@@ -3,6 +3,7 @@ from chunk_data import chunk_data
 from spelling_correction import spelling_correction
 from merge_processed_chunks import merge_processed_chunks
 from remove_punctuation_and_replace_numbers import remove_punctuation_and_replace_numbers
+from filter_by_IQR_num_words import filter_by_IQR_num_words
 
 from config import INPUT_FILE_PATH, \
                     REMOVE_URL_EMOJI_OUTPUT_PATH, \
@@ -12,8 +13,8 @@ from config import INPUT_FILE_PATH, \
                     OUTPUT_MERGED_FILE_NAME, \
                     PATTERN_OUTPUT_FILE_NAME, \
                     OUTPUT_REMOVE_PUNCTUATION_FILE_NAME, \
+                    OUTPUT_CLEANING_FILE_NAME, \
                     COLUMN_NAME_AFTER_CLEAN
-
 
 def main():
     remove_url_emoji(INPUT_FILE_PATH, 
@@ -35,6 +36,12 @@ def main():
                                     OUTPUT_MERGED_FILE_NAME, # Input file name
                                     OUTPUT_REMOVE_PUNCTUATION_FILE_NAME, # Output file name
                                     COLUMN_NAME_AFTER_CLEAN) # Column to process
+
+    filter_by_IQR_num_words(OUTPUT_FILE_PATH, # Input folder
+                            OUTPUT_FILE_PATH, # Output folder
+                            OUTPUT_REMOVE_PUNCTUATION_FILE_NAME, # Input file name
+                            OUTPUT_CLEANING_FILE_NAME, # Output file name
+                            COLUMN_NAME_AFTER_CLEAN) # Column to process
 
 if __name__ == '__main__':
     main()
