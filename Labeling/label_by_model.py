@@ -71,8 +71,3 @@ def label_by_model(input_folder, output_folder):
             
             pbar.update(1)
 
-if __name__ == "__main__":
-    LABELS = ["tích cực", "tiêu cực", "trung lập"]  # Danh sách nhãn
-    INPUT_FOLDER = "/kaggle/working/chunked_label_data/"
-    OUTPUT_FOLDER = "/kaggle/working/labeled_chunks/"
-    zero_shot_labeling(INPUT_FOLDER, OUTPUT_FOLDER, LABELS)
