@@ -18,7 +18,7 @@ PATTERN_OUTPUT_FILE_NAME = "chunk_*.csv"
 CHUNK_SIZE = 100 #Số lượng file được chia
 
 # Mô hình sửa lỗi
-MODEL_NAME = "bmd1905/vietnamese-correction"
+MODEL_NAME = "bmd1905/vietnamese-correction-v2"
 MODEL_TYPE = "text2text-generation"
 MAX_LENGTH = 512
 BATCH_SIZE = 96
